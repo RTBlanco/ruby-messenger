@@ -1,1 +1,11 @@
-<% link_to 'edit', edit_conversation_path(@convo) %>
+
+<% if !@convo.messages.empty?  %>
+  <% @convo.messages.each do |m| %>
+    <li><%= m.user.name %>: <%=m.content%></li>
+  <% end %>
+<% end %>
+
+
+<%= render 'messages/form' %>
+
+<%= link_to 'edit', edit_user_conversation_path(@convo) %>

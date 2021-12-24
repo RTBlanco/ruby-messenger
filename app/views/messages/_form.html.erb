@@ -1,0 +1,6 @@
+<%= form_with model: @message, url: user_conversation_messages_path(@convo.user, @convo.id), method: :post do |m| %>
+  <%= m.label :content %>
+  <%= m.text_field :content %>
+
+  <%= m.submit %>
+<% end %>

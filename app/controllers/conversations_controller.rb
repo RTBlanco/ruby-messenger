@@ -1,6 +1,10 @@
 class ConversationsController < ApplicationController
   before_action :set_convo, only: [:show, :edit, :update, :delete]
 
+  def index 
+    @convos = Conversation.all
+  end 
+
   def new 
     @convo = Conversation.new
   end
@@ -10,7 +14,7 @@ class ConversationsController < ApplicationController
   end
 
   def show 
-
+    @message = Message.new
   end
   
   def edit

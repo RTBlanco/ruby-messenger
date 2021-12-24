@@ -1,5 +1,5 @@
 <ul>
   <%@convos.each do |c| %>
-    <li><%= link_to c.participant.name, convesation_path(c) %></li>
+    <li><%= link_to c.participant.name, user_conversation_path(c.user, c) %></li>
   <% end %>
 </ul>
