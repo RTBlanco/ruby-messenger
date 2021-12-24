@@ -1,0 +1,5 @@
+<ul>
+  <%@convos.each do |c| %>
+    <li><%= link_to c.participant.name, convesation_path(c) %></li>
+  <% end %>
+</ul>
